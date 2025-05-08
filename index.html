@@ -1,139 +1,246 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-          <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sangi Pizza and steak world - Coming Soon</title>
-    <meta name="description" content="SangiPizza is launching soon! Get ready for delicious pizzas made with fresh ingredients. Sign up for updates and be the first to taste our menu.">
-    <meta name="keywords" content="sangipizza,sangi pizza, sangipizza okara, okara famous pizza , steak, pizza, coming soon, restaurant, food, okara, delivery, signup">
-    <meta name="author" content="SangiPizza">
+    <meta name="description" content="Sangi Pizza Steak World in Okara, Punjab offers gourmet pizzas and tender steaks. Visit us on MA Jinnah Road for a premium dining experience.">
+    <meta name="keywords" content="Sangi Pizza Steak World, Okara restaurants, gourmet pizza Okara, steak house Punjab, best food in Okara, Pakistani cuisine, dining Okara, sangi pizza, sangipizza">
+    <meta name="author" content="Sangi Pizza Steak World">
     <meta name="robots" content="index, follow">
-    <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="SangiPizza - Coming Soon">
-    <meta property="og:description" content="SangiPizza is almost here! Sign up to get notified about our delicious pizzas and exclusive launch offers.">
-    <meta property="og:image" content="https://via.placeholder.com/150?text=SangiPizza">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sangi Pizza Steak World - Best Pizza & Steak in Okara, Punjab">
+    <meta property="og:description" content="Enjoy gourmet pizzas and tender steaks at Sangi Pizza Steak World on MA Jinnah Road, Okara. Perfect for families and food lovers in Punjab.">
+    <meta property="og:image" content="https://sangipizza.com/logo.jpeg">
     <meta property="og:url" content="https://sangipizza.com">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_PK">
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SangiPizza - Coming Soon">
-    <meta name="twitter:description" content="SangiPizza is almost here! Sign up to get notified about our delicious pizzas and exclusive launch offers.">
-    <meta name="twitter:image" content="https://via.placeholder.com/150?text=SangiPizza">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-        }
-        .coming-soon-container {
-            text-align: center;
-            padding: 2rem;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-        }
-        .logo {
-            max-width: 150px;
-            margin-bottom: 1.5rem;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        h1 {
-            color: #dc3545;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        p {
-            color: #6c757d;
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
-        .btn-subscribe {
-            background-color: #dc3545;
-            border-color: #dc3545;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-        }
-        .btn-subscribe:hover {
-            background-color: #c82333;
-            border-color: #bd2130;
-        }
-        .form-control {
-            max-width: 300px;
-            margin: 0 auto 1rem;
-        }
-        .social-icons {
-            margin-top: 2rem;
-        }
-        .social-icons a {
-            color: #6c757d;
-            font-size: 1.5rem;
-            margin: 0 0.5rem;
-            text-decoration: none;
-        }
-        .social-icons a:hover {
-            color: #dc3545;
-        }
-    </style>
+    <meta name="twitter:title" content="Sangi Pizza Steak World - Best Pizza & Steak in Okara, Punjab">
+    <meta name="twitter:description" content="Enjoy gourmet pizzas and tender steaks at Sangi Pizza Steak World on MA Jinnah Road, Okara. Perfect for families and food lovers in Punjab.">
+    <meta name="twitter:image" content="https://sangipizza.com/logo.jpeg">
+    <title>Sangi Pizza Steak World - Gourmet Pizza & Steak in Okara, Punjab</title>
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sangipizza.com">
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+   
+    <!-- Structured Data for LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Sangi Pizza Steak World",
+        "description": "Best gourmet pizzas and tender steaks in Okara, Punjab, Pakistan. Visit us on MA Jinnah Road for a premium dining experience.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "MA Jinnah Road Near Jinnah Park",
+            "addressLocality": "Okara",
+            "addressRegion": "Punjab",
+            "postalCode": "56300",
+            "addressCountry": "PK"
+        },
+        "telephone": "+923321808000",
+        "email": "sangipizza00@gmail.com",
+        "url": "https://sangipizza.com",
+        "image": "https://sangipizza.com/logo.jpeg",
+        "sameAs": [
+            "https://web.facebook.com/people/SANGI-Pizza-Steak-World/61574400519863"
+        ],
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 30.8022245,
+            "longitude": 73.4312007
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday"
+                ],
+                "opens": "12:00",
+                "closes": "03:00"
+            }
+        ],
+        "servesCuisine": ["Pizza", "Steak", "Pakistani"],
+        "priceRange": "PKR",
+        "menu": "https://sangipizza.com/"
+    }
+    </script>
 </head>
 <body>
-    <div class="coming-soon-container">
-        <img src="logo.jpg" alt="SangiPizza Logo" class="logo">
-        <h1>We're Cooking Something Great!</h1>
-        <p>SangiPizza is coming soon to satisfy your cravings. Stay tuned for delicious updates!</p>
-        <form>
-            <!-- <input type="email" class="form-control" placeholder="Enter your email" required>
-            <button type="submit" class="btn btn-subscribe btn-lg">Notify Me</button> -->
-        </form>
-        <div class="social-icons">
-            <a href="https://web.facebook.com/people/SANGI-Pizza-Steak-World/61574400519863" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <!-- <a href="https://web.facebook.com/people/SANGI-Pizza-Steak-World/61574400519863" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-            <a href="https://web.facebook.com/people/SANGI-Pizza-Steak-World/61574400519863" aria-label="Instagram"><i class="bi bi-instagram"></i></a> -->
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#home" aria-label="Sangi Pizza Steak World Home">
+                <img src="logo.ico" alt="Sangi Pizza Steak World Logo" loading="lazy">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div id="particles-js"></div>
+        <div class="container">
+            <h1>Welcome to Sangi Pizza Steak World</h1>
+            <!-- <p class="lead">Indulge in a Culinary Masterpiece</p> -->
+            <p class="lead"></p>
+            <a href="#contact" class="btn btn-order mt-4" aria-label="Order Now at Sangi Pizza Steak World">Order Now</a>
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-8">
+                    <h2 class="text-center mb-4" style="color: #f8f1e3;">Our Exquisite Menu</h2>
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <img src="menu1.jpeg" alt="Gourmet Pizza at Sangi Pizza Steak World Okara" class="menu-img" loading="lazy">
+                        <img src="menu2.jpeg" alt="Tender Steak at Sangi Pizza Steak World Okara" class="menu-img" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="text-center mb-4">About Us</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="lead">
+                        At Sangi Pizza Steak World, we craft an unparalleled dining experience with every bite. 
+                        Our menu harmonizes the artistry of gourmet pizzas with the opulence of tender steaks, 
+                        using the freshest ingredients and our signature recipes. Nestled in the heart of Okara, 
+                        we blend warm hospitality with a passion for perfection. Savor the elegance of our dishes, 
+                        crafted with love and dedication for every guest.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h4>Visit Us</h4>
+                    <p><a href="https://www.google.com/maps/place/SANGI+Pizza+and+steak+world/@30.8022245,73.4312007,17z" target="_blank" rel="noopener" aria-label="View Sangi Pizza Steak World on Google Maps">MA Jinnah Road Near Jinnah Park, Okara 56300, Pakistan</a></p>
+                    <h4>Phone</h4>
+                    <p><a href="tel:+923321808000" rel="nofollow" aria-label="Call Sangi Pizza Steak World">+92 332 1808000</a></p>
+                    <h4>Email</h4>
+                    <p><a href="mailto:sangipizza00@gmail.com" rel="nofollow" aria-label="Email Sangi Pizza Steak World">sangipizza00@gmail.com</a></p>
+                </div>
+                <div class="col-lg-6">
+                    <h4>Our Location</h4>
+                    <div class="map-section">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3418.258406087256!2d73.4312007!3d30.8022245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922a7005c2fabd7%3A0xb5c794f496595b3a!2sSANGI+Pizza+and+steak+world!5e0!3m2!1sen!2sus!4v1698771234567!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Sangi Pizza Steak World Location in Okara"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Sangi Pizza Steak World. All rights reserved.</p>
+            <div class="social-icons mt-4">
+                <a href="https://web.facebook.com/people/SANGI-Pizza-Steak-World/61574400519863" target="_blank" rel="noopener" aria-label="Follow Sangi Pizza Steak World on Facebook"><i class="fab fa-facebook-f"></i></a>
+                <!-- <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Go to Top Button -->
+    <button id="goToTopBtn" title="Go to top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <!-- Smooth Scroll, Navbar Scroll Effect, and Go to Top -->
+    <script>
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').classList.add('scrolled');
+            } else {
+                document.querySelector('.navbar').classList.remove('scrolled');
+            }
+        });
+        // Particles.js Configuration
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#d4a017' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
+                size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
+                line_linked: { enable: true, distance: 150, color: '#d4a017', opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 2, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+                modes: { repulse: { distance: 100, duration: 0.4 } }
+            },
+            retina_detect: true
+        });
+        // Go to Top Button Functionality
+        const goToTopBtn = document.getElementById('goToTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                goToTopBtn.style.display = 'block';
+            } else {
+                goToTopBtn.style.display = 'none';
+            }
+        });
+        goToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
