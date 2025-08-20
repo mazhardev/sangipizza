@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sangipizza/static/css/main.627a9381.css",
+    "main.js": "/sangipizza/static/js/main.83f6c3b7.js",
+    "index.html": "/sangipizza/index.html",
+    "main.627a9381.css.map": "/sangipizza/static/css/main.627a9381.css.map",
+    "main.83f6c3b7.js.map": "/sangipizza/static/js/main.83f6c3b7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.627a9381.css",
+    "static/js/main.83f6c3b7.js"
+  ]
+}
