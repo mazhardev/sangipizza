@@ -3,7 +3,7 @@
     "id": 1,
     "dealNo": 1,
     "title": "Deal No.1",
-    "isFreshDeal": true,
+    "isFreshDeal": false,
     "description": "1 Small Fajita Pizza, 1 Zinger Burger, 2 Drinks (300ml)",
     "price": 1100,
     "image": "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80",
@@ -234,4 +234,5 @@
       }
     ]
   }
+
 ]
