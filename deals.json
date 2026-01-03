@@ -1,0 +1,237 @@
+[
+  {
+    "id": 1,
+    "dealNo": 1,
+    "title": "Deal No.1",
+    "isFreshDeal": true,
+    "description": "1 Small Fajita Pizza, 1 Zinger Burger, 2 Drinks (300ml)",
+    "price": 1100,
+    "image": "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80",
+    "items": [
+      {
+        "menuItemId": 1,
+        "name": "Mexican Fajita Pizza",
+        "size": "S",
+        "quantity": 1
+      },
+      {
+        "menuItemId": 13,
+        "name": "Zinger Burger",
+        "quantity": 1
+      },
+      {
+        "menuItemId": 24,
+        "name": "Drink 300ml",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "dealNo": 2,
+    "title": "Deal No.2",
+    "isFreshDeal": true,
+    "description": "1 Grilled Chicken Steak, 1 Grilled Wrap, 1 Large Fries, 1 Ltr Drink",
+    "price": 1830,
+    "image": "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80",
+    "items": [
+      {
+        "menuItemId": 8,
+        "name": "Grilled Chicken Steak",
+        "quantity": 1
+      },
+      {
+        "menuItemId": 9,
+        "name": "Signature Grilled Wrap",
+        "quantity": 1
+      },
+      {
+        "menuItemId": 15,
+        "name": "French Fries",
+        "quantity": 1
+      },
+      {
+        "menuItemId": 26,
+        "name": "Drink 1 Ltr",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "dealNo": 3,
+    "title": "Deal No.3",
+    "isFreshDeal": true,
+    "description": "1 Medium Extreme Supreme Pizza, 1 Black Pepper Chicken Steak, 1 Ltr Drink",
+    "price": 1990,
+    "image": "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80",
+    "items": [
+      {
+        "menuItemId": 3,
+        "name": "Extreme Supreme Pizza",
+        "size": "M",
+        "quantity": 1
+      },
+      {
+        "menuItemId": 8,
+        "name": "Grilled Chicken Steak",
+        "quantity": 1
+      },
+      {
+        "menuItemId": 26,
+        "name": "Drink 1 Ltr",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "dealNo": 4,
+    "title": "Deal No.4",
+    "description": "2 Medium Pizza (1 Reg + 1 Sp), 6 Hot Wings, 1.5 Ltr Drink",
+    "price": 2490,
+    "image": "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80",
+    "items": [
+      {
+        "menuItemId": 1,
+        "name": "Mexican Fajita Pizza",
+        "size": "M",
+        "quantity": 1
+      },
+      {
+        "menuItemId": 3,
+        "name": "Extreme Supreme Pizza",
+        "size": "M",
+        "quantity": 1
+      },
+      {
+        "menuItemId": 18,
+        "name": "Hot Wings",
+        "quantity": 6
+      },
+      {
+        "menuItemId": 27,
+        "name": "Drink 1.5 Ltr",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "dealNo": 5,
+    "title": "Deal No.5",
+    "description": "2 Grilled Wraps, 2 Zinger Burgers, 1 Large Fries, 1.15 Ltr Drink",
+    "price": 2790,
+    "image": "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80",
+    "items": [
+      {
+        "menuItemId": 9,
+        "name": "Signature Grilled Wrap",
+        "quantity": 2
+      },
+      {
+        "menuItemId": 13,
+        "name": "Zinger Burger",
+        "quantity": 2
+      },
+      {
+        "menuItemId": 15,
+        "name": "French Fries",
+        "quantity": 1
+      },
+      {
+        "menuItemId": 27,
+        "name": "Drink 1.5 Ltr",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "dealNo": 6,
+    "title": "Deal No.6",
+    "description": "2 Large Pizza, 6 Hot Wings, 6 Nuggets, 1 Reg Fries, 1.5 Ltr Drink",
+    "price": 3790,
+    "image": "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80",
+    "items": [
+      {
+        "menuItemId": 2,
+        "name": "Chicken Tikka Pizza",
+        "size": "L",
+        "quantity": 1
+      },
+      {
+        "menuItemId": 3,
+        "name": "Extreme Supreme Pizza",
+        "size": "L",
+        "quantity": 1
+      },
+      {
+        "menuItemId": 18,
+        "name": "Hot Wings",
+        "quantity": 6
+      },
+      {
+        "menuItemId": 19,
+        "name": "Nuggets & Fries",
+        "quantity": 6
+      },
+      {
+        "menuItemId": 15,
+        "name": "French Fries",
+        "quantity": 1
+      },
+      {
+        "menuItemId": 27,
+        "name": "Drink 1.5 Ltr",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "dealNo": 7,
+    "title": "Deal No.7",
+    "description": "1 XL Pizza, 1 Special XL Pizza, 12 Hot Wings, 2 Large Fries, 2 Zinger Burgers, 2 (1.5 Ltr) Drinks",
+    "price": 6490,
+    "image": "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80",
+    "items": [
+      {
+        "menuItemId": 1,
+        "name": "Mexican Fajita Pizza",
+        "size": "XL",
+        "quantity": 1
+      },
+      {
+        "menuItemId": 2,
+        "name": "Special XL Pizza",
+        "size": "XL",
+        "quantity": 1
+      },
+      {
+        "menuItemId": 3,
+        "name": "Hot Wings",
+        "size": "6 pcs",
+        "quantity": 2
+      },
+      {
+        "menuItemId": 4,
+        "name": "Large Fries",
+        "size": "Large",
+        "quantity": 2
+      },
+      {
+        "menuItemId": 5,
+        "name": "Zinger Burger",
+        "size": "Regular",
+        "quantity": 2
+      },
+      {
+        "menuItemId": 6,
+        "name": "Soft Drink",
+        "size": "1.5 Ltr",
+        "quantity": 2
+      }
+    ]
+  }
+]
