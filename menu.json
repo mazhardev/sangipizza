@@ -349,7 +349,6 @@
   {
     "id": 25,
     "name": "Drink 500ml",
-     "isPopular": true,
     "category": "Drink",
     "price": 120,
     "image": "https://images.unsplash.com/photo-1622484206473-3bfd331281e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80"
@@ -370,3 +369,4 @@
   }
 
 ]
+
