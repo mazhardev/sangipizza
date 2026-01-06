@@ -205,51 +205,8 @@
         "quantity": 1
       }
     ]
-  },
-  {
-    "id": 7,
-    "dealNo": 7,
-    "title": "Deal No.7",
-    "description": "1 XL Pizza, 1 Special XL Pizza, 12 Hot Wings, 2 Large Fries, 2 Zinger Burgers, 2 (1.5 Ltr) Drinks",
-    "price": 6490,
-    "image": "https://sangipizza.com/soon.png",
-    "items": [
-      {
-        "menuItemId": 101,
-        "name": "Mexican Fajita Pizza",
-        "size": "XL",
-        "quantity": 1
-      },
-      {
-        "menuItemId": 115,
-        "name": "Special XL Pizza",
-        "size": "XL",
-        "quantity": 1
-      },
-      {
-        "menuItemId": 110,
-        "name": "Hot Wings",
-        "size": "6 pcs",
-        "quantity": 2
-      },
-      {
-        "menuItemId": 106,
-        "name": "French Fries",
-        "size": "Large",
-        "quantity": 2
-      },
-      {
-        "menuItemId": 102,
-        "name": "Zinger Burger",
-        "size": "Regular",
-        "quantity": 2
-      },
-      {
-        "menuItemId": 111,
-        "name": "Drink",
-        "size": "1.5 Ltr",
-        "quantity": 2
-      }
+  }
     ]
   }
 ]
+
