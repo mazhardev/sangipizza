@@ -1,0 +1,254 @@
+[
+  {
+    "id": 1,
+    "name": "Mexican Fajita Pizza",
+    "category": "Pizza",
+    "isPopular": true,
+    "description": "Spicy fajita chicken with bell peppers and onions",
+    "sizes": [
+      { "label": "S", "price": 550 },
+      { "label": "M", "price": 1050 },
+      { "label": "L", "price": 1490 },
+      { "label": "XL", "price": 2090 },
+      { "label": "XXL", "price": 2590 }
+    ],
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 2,
+    "name": "Chicken Tikka Pizza",
+    "category": "Pizza",
+    "description": "Tender chicken tikka pieces with special sauce",
+    "sizes": [
+      { "label": "S", "price": 550 },
+      { "label": "M", "price": 1050 },
+      { "label": "L", "price": 1490 },
+      { "label": "XL", "price": 2090 },
+      { "label": "XXL", "price": 2590 }
+    ],
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 3,
+    "name": "Extreme Supreme Pizza",
+    "category": "Pizza",
+    "isPopular": true,
+    "description": "Loaded with all our premium toppings",
+    "sizes": [
+      { "label": "S", "price": 590 },
+      { "label": "M", "price": 1150 },
+      { "label": "L", "price": 1670 },
+      { "label": "XL", "price": 2190 },
+      { "label": "XXL", "price": 2790 }
+    ],
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 4,
+    "name": "Malai Boti Pizza",
+    "category": "Pizza",
+    "description": "Creamy malai boti chicken with cheese",
+    "sizes": [
+      { "label": "S", "price": 590 },
+      { "label": "M", "price": 1150 },
+      { "label": "L", "price": 1670 },
+      { "label": "XL", "price": 2190 },
+      { "label": "XXL", "price": 2790 }
+    ],
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 5,
+    "name": "Sangi Signature Pizza",
+    "category": "Pizza",
+    "description": "Signature special pizza loaded with toppings",
+    "sizes": [
+      { "label": "S", "price": 1470 },
+      { "label": "M", "price": 2150 },
+      { "label": "L", "price": 2690 },
+      { "label": "XL", "price": 3090 }
+    ],
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 6,
+    "name": "Royal Crown Pizza",
+    "category": "Pizza",
+    "description": "Delicious royal crown pizza with rich flavors",
+    "sizes": [
+      { "label": "S", "price": 1350 },
+      { "label": "M", "price": 1850 },
+      { "label": "L", "price": 2470 },
+      { "label": "XL", "price": 2990 }
+    ],
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 7,
+    "name": "Chicken Cheese Stuffer",
+    "category": "Pizza",
+    "description": "Cheesy stuffed crust with chicken topping",
+    "sizes": [
+      { "label": "S", "price": 1390 },
+      { "label": "M", "price": 2050 },
+      { "label": "L", "price": 2550 },
+      { "label": "XL", "price": 3050 }
+    ],
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 8,
+    "name": "Grilled Chicken Steak",
+    "category": "Steak",
+    "isPopular": true,
+    "description": "Tender grilled chicken steak with side salad",
+    "price": 950,
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 9,
+    "name": "Signature Grilled Wrap",
+    "category": "Wrap",
+    "isPopular": true,
+    "description": "Grilled chicken with fresh veggies in a soft wrap",
+    "price": 790,
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 10,
+    "name": "Crispy Zee Wrap",
+    "category": "Wrap",
+    "description": "Crispy chicken with sauces in wrap",
+    "price": 690,
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 11,
+    "name": "Smashed Beef Burger",
+    "category": "Burger",
+    "description": "Juicy smashed beef patty with special sauce",
+    "price": 590,
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 12,
+    "name": "Cheese Stuffed Burger",
+    "category": "Burger",
+    "description": "Burger stuffed with melted cheese",
+    "price": 690,
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 13,
+    "name": "Zinger Burger",
+    "category": "Burger",
+    "isPopular": true,
+    "description": "Crispy zinger fillet with fresh veggies",
+    "price": 540,
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 14,
+    "name": "Hot Nashville Burger",
+    "category": "Burger",
+    "description": "Spicy Nashville-style chicken burger",
+    "price": 540,
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 15,
+    "name": "French Fries",
+    "category": "Starter",
+    "variants": [{ "option": "Plain / Salsa", "price": 300 }],
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 16,
+    "name": "Baked Wings",
+    "category": "Starter",
+    "variants": [{ "option": "6 Pcs", "price": 400 }],
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 17,
+    "name": "Chicken Cheese Fries",
+    "category": "Starter",
+    "price": 790,
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 18,
+    "name": "Hot Wings",
+    "category": "Starter",
+    "variants": [{ "option": "6 Pcs", "price": 400 }],
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 19,
+    "name": "Nuggets & Fries",
+    "category": "Starter",
+    "variants": [{ "option": "6 Pcs", "price": 450 }],
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 20,
+    "name": "Prima Vera Pasta",
+    "category": "Pasta",
+    "isPopular": true,
+    "description": "Fresh pasta with vegetables in tomato sauce",
+    "price": 750,
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 21,
+    "name": "Creamy White Sauce Pasta",
+    "category": "Pasta",
+    "description": "Pasta with creamy white sauce and herbs",
+    "price": 750,
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 22,
+    "name": "Chocolate Molten Lava",
+    "category": "Dessert",
+    "description": "Warm chocolate cake with molten center",
+    "price": 490,
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 23,
+    "name": "Mexican Pizza Sandwich",
+    "category": "Sandwich",
+    "description": "Cheesy Mexican pizza-style sandwich",
+    "price": 690,
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 24,
+    "name": "Drink 300ml",
+    "category": "Drink",
+    "price": 80,
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 25,
+    "name": "Drink 500ml",
+    "category": "Drink",
+    "price": 120,
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 26,
+    "name": "Drink 1 Ltr",
+    "category": "Drink",
+    "price": 150,
+    "image": "https://sangipizza.com/soon.png"
+  },
+  {
+    "id": 27,
+    "name": "Drink 1.5 Ltr",
+    "category": "Drink",
+    "price": 200,
+    "image": "https://sangipizza.com/soon.png"
+  }
+]
